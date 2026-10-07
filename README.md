@@ -1,22 +1,18 @@
-# YSADF
+# YSADF · 杨宝山
 
-你好，我是 YSADF。我独立负责 OCR 文档系统项目的设计、开发与部署。
+AI 应用开发，关注文档处理、OCR 与 Agent / RAG。我负责把识别、检索和模型能力接入可运行的业务流程，并保留输入、配置、结果与失败记录，让工程结论能够核查。
 
-我的工作覆盖 PDF/图片解析、文字识别、版面与表格处理、结构化输出，以及相关组件集成和服务部署。我关注文字、位置与文档结构之间的对应关系，让识别结果能够用于编辑、检索和后续业务处理。
-
-**技术栈：** Python · PaddleOCR · OpenCV · PyMuPDF · Docker · ONNX Runtime
+**Python · FastAPI · PaddleOCR · OpenCV · PyMuPDF · LangGraph · SQLite · Docker**
 
 ## 项目展示
 
-### [OCR 与文档结构化系统](https://github.com/YSADF/ocr-document-showcase)
+| 项目 | 解决的问题 | 公开证据 |
+|---|---|---|
+| [OCR 与文档结构化](https://github.com/YSADF/ocr-document-showcase) | PDF / 扫描页解析、工程字符保护、合并表格与版式交付 | RTX 5090 两个公开案例，各 20 次请求；表格文字 19/21 格完全匹配、5/5 合并关系匹配；同时公开 Word 渲染缺陷 |
+| [文档 Agent 与 RAG](https://github.com/YSADF/agent-rag-showcase) | 带引用的问答、跨文档核对、审批与调用去重 | 18 份虚构文档、24 道题，真实本地 Qwen 模型；JSON 约束补齐后任务完成 19/24 → 24/24；仍记录来源归属问题 |
 
-通过公开样本、处理结果和独立演示脚本，展示我的 OCR 文档处理经验，包括 PDF 解析、页面坐标转换、合并单元格结构表达及结果核查。
+两个仓库只公开精选可运行片段、公开样本、评测客户端和实测产物。模型与框架来自开源项目；我的贡献集中在文档链路、业务编排、状态管理、异常处理与部署验证。
 
-- [工程 PDF 文字与坐标案例](https://github.com/YSADF/ocr-document-showcase/blob/main/cases/engineering-pdf.md)：使用 DEXPI C03 公开工程图，展示 PDF 原生文字提取、文字位置框和坐标 JSON。
-- [合并单元格表格案例](https://github.com/YSADF/ocr-document-showcase/blob/main/cases/merged-table.md)：使用自制公开样本，展示跨行、跨列合并和人工定义的结构真值。
+数字都附有测量范围与原始记录。小规模合成测试不等于生产准确率，字段检查通过也不等于逐句语义完全正确。
 
-当前案例展示原生文字解析基线与表格结构真值。模型 OCR、表格结构预测及可编辑 Word 输出效果仍待实测，结果状态与复现方法见项目文档。
-
-## 联系
-
-欢迎通过 [GitHub](https://github.com/YSADF) 查看项目与交流。
+[OCR 实测方法](https://github.com/YSADF/ocr-document-showcase/blob/main/EVALUATION.md) · [Agent 实测方法](https://github.com/YSADF/agent-rag-showcase/blob/main/EVALUATION.md)
