@@ -14,3 +14,5 @@ AI 应用开发，关注文档处理、OCR 与 Agent / RAG。我负责把识别�
 数字都附有测量范围与证据说明。真实图纸标注由助手目视核对，尚待独立人工复核；选定区域转写和小规模合成测试都不等于生产准确率，待复核不计为验收正确，字段检查通过也不等于逐句语义完全正确。
 
 [OCR 第三轮实测](https://github.com/YSADF/ocr-document-showcase/blob/main/cases/engineering-vlm-round3.md) · [Agent 实测方法](https://github.com/YSADF/agent-rag-showcase/blob/main/EVALUATION.md)
+
+OCR 最新进展：[PPv6 主识别与局部 VLM 兜底](https://github.com/YSADF/ocr-document-showcase/blob/main/cases/engineering-fallback-round4.md)。已完成代码接入与本地验证，新模型 GPU 成绩待测；公开记录了区域预算下的漏覆盖，未将模型候选作为人工真值。
